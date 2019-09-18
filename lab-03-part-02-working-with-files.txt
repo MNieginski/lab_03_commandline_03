@@ -36,8 +36,7 @@ $ touch foo.txt
 $ ls
 Copy and paste the output below.
 ----------
-
-
+foo.txt
 
 ==========
 7. Create another new file using touch.
@@ -52,8 +51,11 @@ $ touch bar.txt
 
 Copy and paste the output below.
 ----------
-
-
+total 0
+drwxr-xr-x  4 student  staff  136 Sep 18 19:06 .
+-rw-r--r--  1 student  staff    0 Sep 18 19:06 bar.txt
+-rw-r--r--  1 student  staff    0 Sep 18 19:03 foo.txt
+drwxr-xr-x@ 7 student  staff  238 Sep 18 19:02 ..
 
 ==========
 9. Create a copy of bar.txt called baz.txt and then list the files again.
@@ -61,23 +63,23 @@ Copy and paste the output below.
 
 Write the command that you used to copy the file.  Additionally, copy and paste the output of your file listing below.
 ----------
-
-
-
+cp bar.txt baz.txt
+bar.txt	baz.txt	foo.txt
 ==========
 10. Delete the file called bar.txt and then list the files again.
 
 Write the command that you used to remove the file.  Copy and paste the output of your file listing below.
 ----------
+rm bar.txt
+baz.txt	foo.txt
 ==========
 11. Move the file called foo.txt to qux.txt and then list the files again.
 
 
 Write the command that you used to move the file.  Copy and paste the output of your file listing below.
 ----------
-
-
-
+mv foo.txt qux.txt
+baz.txt	qux.txt
 ==========
 12. Go up one directory so that you're in ~/mtec1002-lab-03.
 [NO OUTPUT]
@@ -90,16 +92,14 @@ Write the command that you used to move the file.  Copy and paste the output of 
 
 Write out the command that you used and what happened.
 ----------
-
-
-
+rmdir my_files/
+rmdir: my_files/: Directory not empty
 ==========
 14. Try removing the directory called my_files using rm.
 
 Write out the command that you used and what happened.
 ----------
-
-
+rm: my_files/: is a directory
 
 ==========
 15. MAKE SURE YOU'RE IN THE mtec1002-lab-03 directory!  
@@ -120,7 +120,7 @@ Use the command called cat on the file to show its contents.
 
 Describe what happened below.
 ----------
-
+the whole .txt file was output on the terminal
 
 
 ==========
@@ -132,8 +132,8 @@ Use the command, head, on the file to show the contents of the beginning of the 
 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
-
-
+head pg1232.txt
+Title: The Prince
 
 ==========
 18. Using the same file again!
@@ -156,7 +156,11 @@ Use less and more on the file to show the contents of the file.  Try pressing sp
 
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
 ----------
+less pg1232.txt
+more pg1232.txt
 
+<SPACE> goes down by chunks
+<Q> brings back to bottom
 
 
 ==========
